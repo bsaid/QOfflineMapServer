@@ -27,5 +27,5 @@ Tool for downloading and serving XYZ tile maps inside offline networks.
 
 ### Norgeskart
 - Map: [https://opencache2.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}](https://opencache2.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom=5&x=17&y=7)
-- ![Norgeskart]((https://opencache2.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom=5&x=17&y=7))
+- ![Norgeskart](https://opencache2.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom=5&x=17&y=7)
 - Satellite: [https://waapi.webatlas.no/maptiles/tiles/webatlas-orto-newup/wa_grid/{z}/{x}/{y}.jpeg?api_key=\*\*\*](https://waapi.webatlas.no/maptiles/tiles/webatlas-orto-newup/wa_grid/5/17/7.jpeg?api_key=\*\*\*)
