@@ -1,6 +1,9 @@
 # QOfflineMapServer
 Tool for downloading and serving XYZ tile maps inside offline networks.
 
+## Download
+- Latest release for Windows: [QOfflineMapServer_v1.0.zip](https://github.com/bsaid/QOfflineMapServer/releases/download/v1.0/QOfflineMapServer_v1.0.zip)
+
 ![Introduction diagram](docs/introDiagram.svg)
 
 ## GUI
