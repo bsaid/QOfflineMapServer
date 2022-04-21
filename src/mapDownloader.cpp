@@ -261,8 +261,8 @@ void MapDownloader::CreateLocalHost()
     QHttpServer *server = new QHttpServer(this);
     connect(server, SIGNAL(newRequest(QHttpRequest*, QHttpResponse*)),
         this, SLOT(handleRequest(QHttpRequest*, QHttpResponse*)));
-    server->listen(QHostAddress::Any, 8080);
-    ui->lineEditStatus->setText("Running at: http://127.0.0.1:8080/${z}/${x}/${y}.png");
+    server->listen(QHostAddress::Any, ui->serverPortSpinBox->value());
+    ui->lineEditStatus->setText("http://127.0.0.1:" + QString::number(ui->serverPortSpinBox->value()) + "/{z}/{x}/{y}.png");
 }
 
 void MapDownloader::handleRequest(QHttpRequest *req, QHttpResponse *resp)
@@ -321,10 +321,4 @@ void Responder::accumulate(const QByteArray &data)
 void Responder::reply()
 {
     m_resp->end(QByteArray("</body></html>"));
-}
-
-
-void MapDownloader::on_LocalHost_clicked()
-{
-
 }

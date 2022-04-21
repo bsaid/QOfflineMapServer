@@ -211,7 +211,6 @@
          <widget class="QPushButton" name="Download">
           <property name="font">
            <font>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -270,6 +269,27 @@
          </layout>
         </item>
         <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Server port:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="serverPortSpinBox">
+            <property name="maximum">
+             <number>99999</number>
+            </property>
+            <property name="value">
+             <number>8080</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
          <widget class="Line" name="line_6">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -288,7 +308,7 @@
           <item>
            <widget class="QLabel" name="label_13">
             <property name="text">
-             <string>Status:</string>
+             <string>Running at:</string>
             </property>
            </widget>
           </item>
@@ -346,12 +366,30 @@
      <x>0</x>
      <y>0</y>
      <width>1242</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>MapURL</tabstop>
+  <tabstop>Zoom</tabstop>
+  <tabstop>Latitude1</tabstop>
+  <tabstop>Latitude2</tabstop>
+  <tabstop>Longitude1</tabstop>
+  <tabstop>Longitude2</tabstop>
+  <tabstop>ResetPoints</tabstop>
+  <tabstop>lineEditOutDir</tabstop>
+  <tabstop>ChangeDirectory</tabstop>
+  <tabstop>Download</tabstop>
+  <tabstop>lineEditInDir</tabstop>
+  <tabstop>SelectFolder</tabstop>
+  <tabstop>serverPortSpinBox</tabstop>
+  <tabstop>LocalHost</tabstop>
+  <tabstop>lineEditStatus</tabstop>
+  <tabstop>textBrowser</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

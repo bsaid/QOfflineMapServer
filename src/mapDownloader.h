@@ -84,8 +84,6 @@ private slots:
     void SelectFolder();
     /* Directs the path to the folder with TileMap. */
 
-    void on_LocalHost_clicked();
-
 private:
     Ui::MapDownloader *ui;
     QImage* img;
