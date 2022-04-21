@@ -34,15 +34,24 @@ void MapDownloader::Download()
     for (int i = 0; (size_t)i < Figure.size(); ++i) {
         std::string mapStr = ui->MapURL->text().toStdString();
         size_t index = 0;
-        index = mapStr.find("${z}", index);
+        index = mapStr.find("${z}", 0);
+        if(index == std::string::npos)
+        {
+            index = mapStr.find("{z}", 0);
+        }
         mapStr.replace(index, 4, std::to_string(Figure[i].zoom));
-        index = 0;
-        index = mapStr.find("${y}", index);
+        index = mapStr.find("${y}", 0);
+        if(index == std::string::npos)
+        {
+            index = mapStr.find("{y}", 0);
+        }
         mapStr.replace(index, 4, std::to_string(Figure[i].y));
-        index = 0;
-        index = mapStr.find("${x}", index);
+        index = mapStr.find("${x}", 0);
+        if(index == std::string::npos)
+        {
+            index = mapStr.find("{x}", 0);
+        }
         mapStr.replace(index, 4, std::to_string(Figure[i].x));
-        index = 0;
         mapStr.append(" " + std::to_string(Figure[i].zoom) + "_" + std::to_string(Figure[i].x) + "_" + std::to_string(Figure[i].y));
         lines.push_back(QString::fromUtf8(mapStr.c_str()));
     }
