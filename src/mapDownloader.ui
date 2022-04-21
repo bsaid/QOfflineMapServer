@@ -44,7 +44,7 @@
         <item>
          <widget class="QLineEdit" name="MapURL">
           <property name="text">
-           <string>http://opencache2.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&amp;zoom=${z}&amp;x=${x}&amp;y=${y}</string>
+           <string>http://opencache2.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&amp;zoom={z}&amp;x={x}&amp;y={y}</string>
           </property>
          </widget>
         </item>
@@ -366,7 +366,7 @@
      <x>0</x>
      <y>0</y>
      <width>1242</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

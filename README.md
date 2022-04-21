@@ -14,7 +14,8 @@ I wish to express my thanks to [Griff Aviation AS](https://griffaviation.com/) f
 ## Examples of the map sources
 
 ### OpenStreetMap
-- Standard [OpenStreetMap](https://www.openstreetmap.org/): [https://tile.openstreetmap.org/${z}/${x}/${y}.png](https://tile.openstreetmap.org/5/10/15.png)
+- Standard [OpenStreetMap](https://www.openstreetmap.org/): [https://tile.openstreetmap.org/{z}/{x}/{y}.png](https://tile.openstreetmap.org/5/10/15.png)
+- The application also supports tile server links with \$ sign in the address. For example: [OpenStreetMap](https://www.openstreetmap.org/): [https://tile.openstreetmap.org/${z}/${x}/${y}.png](https://tile.openstreetmap.org/5/10/15.png)
 - ![OpenStreetMap](https://tile.openstreetmap.org/5/10/15.png)
 - More details about OpenStreetMap tile servers are here: [https://wiki.openstreetmap.org/wiki/Tile_servers](https://wiki.openstreetmap.org/wiki/Tile_servers)
 
