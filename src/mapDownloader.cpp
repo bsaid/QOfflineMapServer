@@ -35,31 +35,32 @@ void MapDownloader::Download()
         std::string mapStr = ui->MapURL->text().toStdString();
         size_t index = 0;
         index = mapStr.find("${z}", 0);
-        if(index == std::string::npos)
-        {
+        if(index == std::string::npos) {
             index = mapStr.find("{z}", 0);
+            mapStr.replace(index, 3, std::to_string(Figure[i].zoom));
+        } else {
+            mapStr.replace(index, 4, std::to_string(Figure[i].zoom));
         }
-        mapStr.replace(index, 4, std::to_string(Figure[i].zoom));
         index = mapStr.find("${y}", 0);
-        if(index == std::string::npos)
-        {
+        if(index == std::string::npos) {
             index = mapStr.find("{y}", 0);
+            mapStr.replace(index, 3, std::to_string(Figure[i].y));
+        } else {
+            mapStr.replace(index, 4, std::to_string(Figure[i].y));
         }
-        mapStr.replace(index, 4, std::to_string(Figure[i].y));
         index = mapStr.find("${x}", 0);
-        if(index == std::string::npos)
-        {
+        if(index == std::string::npos) {
             index = mapStr.find("{x}", 0);
+            mapStr.replace(index, 3, std::to_string(Figure[i].x));
+        } else {
+            mapStr.replace(index, 4, std::to_string(Figure[i].x));
         }
-        mapStr.replace(index, 4, std::to_string(Figure[i].x));
         mapStr.append(" " + std::to_string(Figure[i].zoom) + "_" + std::to_string(Figure[i].x) + "_" + std::to_string(Figure[i].y));
         lines.push_back(QString::fromUtf8(mapStr.c_str()));
     }
     manager = new QNetworkAccessManager(this);
     connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyFinished(QNetworkReply*)));
-    ui->progressBar->setMinimum(0);
-    ui->progressBar->setMaximum(lines.size());
-    ui->progressBar->setValue(0);
+    ui->progressBar->setMaximum(ui->progressBar->maximum()+lines.size());
     for(QString line : lines)
     {
         QString address = line.split(" ")[0];
@@ -78,6 +79,7 @@ void MapDownloader::CreateDir()
 
 void MapDownloader::replyFinished(QNetworkReply* reply)
 {
+    qDebug() << ui->progressBar->value() << " ";
     if(reply->error())
     {
         qDebug() << "ERROR!";
@@ -85,6 +87,7 @@ void MapDownloader::replyFinished(QNetworkReply* reply)
     }
     else
     {
+
         qDebug() << reply->header(QNetworkRequest::ContentTypeHeader).toString();
         qDebug() << reply->header(QNetworkRequest::LastModifiedHeader).toDateTime().toString();;
         qDebug() << reply->header(QNetworkRequest::ContentLengthHeader).toULongLong();
@@ -206,6 +209,9 @@ bool MapDownloader::DownloadEvent()
     std::wstring LatitudeStr2 = ui->Latitude2->text().toStdWString();
     std::wstring LongitudeStr2 = ui->Longitude2->text().toStdWString();
     QString Zoom = ui->Zoom->text();
+    ui->progressBar->setMinimum(0);
+    ui->progressBar->setMaximum(0);
+    ui->progressBar->setValue(0);
     ui->textBrowser->append("First and last point in rectangle");
     ui->textBrowser->append("-----------------------------------");
     if(CheckInput(LatitudeStr1) && CheckInput(LongitudeStr1) && CheckInput(LatitudeStr2) && CheckInput(LongitudeStr2))
@@ -283,9 +289,6 @@ MapDownloader::~MapDownloader()
 {
     delete ui;
 }
-
-
-
 
 /// Responder
 
