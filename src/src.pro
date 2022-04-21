@@ -1,5 +1,5 @@
 QT += network
-QT += core gui
+QT += core gui concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -31,10 +31,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mapDownloader.cpp
+    mapDownloader.cpp \
+    qtobjectpointer.cpp \
+    tooltipwarn.cpp \
+    updater.cpp \
+    utils.cpp
 
 HEADERS += \
-    mapDownloader.h
+    mapDownloader.h \
+    qtobjectpointer.h \
+    revision.h \
+    tooltipwarn.h \
+    updater.h \
+    utils.h
 
 FORMS += \
     mapDownloader.ui
