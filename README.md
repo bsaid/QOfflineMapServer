@@ -9,6 +9,7 @@ I wish to express my thanks to [Griff Aviation AS](https://griffaviation.com/) f
 ## Integration with other applications
 1. [Integration with Micropilot Horizon](/docs/HorizonIntegration.md)
 
+## Typical workflow
 ![Introduction diagram](docs/introDiagram.svg)
 
 ## GUI
