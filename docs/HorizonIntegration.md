@@ -3,17 +3,17 @@ First, follow the [README.md](../README.md) to download your map and start the Q
 
 Then, open Micropilot Horizon and go to the `Settings` -> `Horizon Settings...`. If the text is grayed out, you have to select your UAV first.
 
-![Horizon1](/horizon1.png)
+![Horizon1](/docs/horizon1.png)
 
 Go to `Maps` tab and check the `Enable downloading maps via custom tile server (specify {x} {y} {z})` checkbox. Then, paste the server address and port to the `URL` field.
 
-![Horizon2](/horizon2.png)
+![Horizon2](/docs/horizon2.png)
 
 Check `OSM/XYZ` radio button and select the tile extension according to the server address line.
 
 Click `Save and Close`. Horizon will probably ask you to restart the application. Now you should be able to see your offline map.
 
-![Horizon3](/horizon3.png)
+![Horizon3](/docs/horizon3.png)
 
 
 ## Troubleshooting
