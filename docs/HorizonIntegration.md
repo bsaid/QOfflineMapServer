@@ -1,4 +1,5 @@
 # How to integrate QOfflineMapServer with Micropilot Horizon GCS
+
 First, follow the [README.md](../README.md) to download your map and start the QOfflineMapServer.
 
 Then, open Micropilot Horizon and go to the `Settings` -> `Horizon Settings...`. If the text is grayed out, you have to select your UAV first.
@@ -6,6 +7,8 @@ Then, open Micropilot Horizon and go to the `Settings` -> `Horizon Settings...`.
 ![Horizon1](/docs/horizon1.png)
 
 Go to `Maps` tab and check the `Enable downloading maps via custom tile server (specify {x} {y} {z})` checkbox. Then, paste the server address and port to the `URL` field.
+
+**Note:** The server address should not contain any `$` characters. If it contains, simply remove them.
 
 ![Horizon2](/docs/horizon2.png)
 
@@ -17,5 +20,6 @@ Click `Save and Close`. Horizon will probably ask you to restart the application
 
 
 ## Troubleshooting
+
 - If you do not see any map, make sure that you are looking at the area you have downloaded.
 - You can try to paste the server address into your browser and check that the image is displayed. Of course, you have to replace the `{x}`, `{y}`, `{z}` with numbers of the tile you want to see. You can find examples of these numbers in the folder with the downloaded map tiles.
