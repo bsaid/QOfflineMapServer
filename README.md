@@ -22,6 +22,8 @@ I wish to express my thanks to [Griff Aviation AS](https://griffaviation.com/) f
 
 ## Examples of the map sources
 
+**Disclaimer:** Before you download any map tiles, please check the provider's license if you are allowed to do so. The maps tiles (including the examples below) may be protected by copyright.
+
 ### OpenStreetMap
 
 - Standard [OpenStreetMap](https://www.openstreetmap.org/): [https://tile.openstreetmap.org/{z}/{x}/{y}.png](https://tile.openstreetmap.org/5/10/15.png)
