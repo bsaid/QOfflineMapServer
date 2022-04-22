@@ -6,6 +6,9 @@ I wish to express my thanks to [Griff Aviation AS](https://griffaviation.com/) f
 ## Download
 - Latest release for Windows: [QOfflineMapServer_win64.zip](https://github.com/bsaid/QOfflineMapServer/releases/latest/download/QOfflineMapServer_win64.zip)
 
+## Integration with other applications
+1. [Integration with Micropilot Horizon](/docs/HorizonIntegration.md)
+
 ![Introduction diagram](docs/introDiagram.svg)
 
 ## GUI
